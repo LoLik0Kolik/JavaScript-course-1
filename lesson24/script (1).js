@@ -38,5 +38,5 @@ for( let i = 0; i < 2; i++){
         }
 };
 console.log(personalMovieDB);
-'use strict';
+ 
 // Код возьмите из предыдущего домашнего задания
