@@ -121,3 +121,56 @@ calculateVolumeAndArea(10);
 
 // console.log(personalMovieDB);
 // Код возьмите из предыдущего домашнего задания
+function calculateVolumeAndArea(meaning){
+    
+    if(typeof(meaning)!== 'number' || meaning < 0 || !Number.isInteger(meaning)){
+        return 'При вычислении произошла ошибка'
+    }
+    let V = 0;
+    let S = 0;
+    if (meaning >= 0){
+        V = meaning * meaning * meaning;
+        S = 6*(meaning * meaning);
+        console.log(`Объем куба: ${V}, площадь всей поверхности: ${S}`);
+        return `Объем куба: ${V}, площадь всей поверхности: ${S}`
+        
+    }
+}
+calculateVolumeAndArea(10);
+
+
+function findMaxNumber(one, two, three, four) {
+    if (typeof(one) !== 'number' ||
+    typeof(two) !== 'number'     ||
+    typeof(three) !== 'number'   ||
+    typeof(four) !== 'number') {
+    return 0;
+}else{
+    return Math.max(one, two, three, four);
+}
+}
+findMaxNumber(3, 7, 9, 12);
+
+// 2) Напишите функцию, которая принимает в себя 4 числа и возвращает самое большее из них. Если один из аргументов не является числом или их меньше 4 - возвращается 0. Дробные числа разрешены.
+
+// Пример:
+
+// findMaxNumber(1, 5, 6.6, 11); =>  11
+
+// findMaxNumber(1, 5, '6', '10');  =>  0
+
+function findMaxNumber(a, b ,c, d) {
+    // Самое простое - это использовать Math.max :)
+    // А оптимизировать такую проверку мы научимся совсем скоро
+    if (typeof(a) !== 'number' ||
+        typeof(b) !== 'number' ||
+        typeof(c) !== 'number' ||
+        typeof(d) !== 'number') {
+        return 0;
+    } else {
+        return Math.max(a, b ,c, d);
+    }
+}
+
+findMaxNumber(1, 5, 6.6, 10.5);
+findMaxNumber(1, 5, '6', '10');
